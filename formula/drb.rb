@@ -5,25 +5,25 @@
 class Drb < Formula
   desc "DevRel Blox"
   homepage "https://github.com/devrel-blox/"
-  version "0.1.13"
+  version "0.1.14"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/devrel-blox/drb/releases/download/v0.1.13/drb_0.1.13_darwin_amd64.tar.gz"
-    sha256 "2d992aa29200aa5e508394cbee659d86b7d0e7a7045cdacd3be08e22e53a84a9"
+    url "https://github.com/devrel-blox/drb/releases/download/v0.1.14/drb_0.1.14_darwin_amd64.tar.gz"
+    sha256 "8c69ee282ede5928c56ebb1fa57be50dbc4daaf3047d8a1c6738fbc0f0302e8e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/devrel-blox/drb/releases/download/v0.1.13/drb_0.1.13_darwin_arm64.tar.gz"
-    sha256 "b05b2ffcdc798083aefaaec494c6e6d21ce667623ca028c639ea71f2a42521ae"
+    url "https://github.com/devrel-blox/drb/releases/download/v0.1.14/drb_0.1.14_darwin_arm64.tar.gz"
+    sha256 "489037511949e26d422a10a105bad9864f392826b00304dd5bd2bb26c92203df"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/devrel-blox/drb/releases/download/v0.1.13/drb_0.1.13_linux_amd64.tar.gz"
-    sha256 "ae1a89fda91c42930148876963894322585a4b2431b82ae11532fbf8cb7782c5"
+    url "https://github.com/devrel-blox/drb/releases/download/v0.1.14/drb_0.1.14_linux_amd64.tar.gz"
+    sha256 "35a95d322ba3f5b59444db676656d1684a3bd910d43008e59f7b9e7c0a83f4bf"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/devrel-blox/drb/releases/download/v0.1.13/drb_0.1.13_linux_arm64.tar.gz"
-    sha256 "ba120720c62935ce0dade07bc2a6fb1c5e9f8dff359e6ba1e00d3547f537d6c9"
+    url "https://github.com/devrel-blox/drb/releases/download/v0.1.14/drb_0.1.14_linux_arm64.tar.gz"
+    sha256 "b8126f16da206cf21da7683a62d822d965c57a046d50b217e28871f5203f4324"
   end
 
   def install
