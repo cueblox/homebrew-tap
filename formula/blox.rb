@@ -5,25 +5,25 @@
 class Blox < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/cueblox/blox/releases/download/v0.2.2/blox_0.2.2_darwin_amd64.tar.gz"
-    sha256 "66f56531e5b626e8294715cdfcfdc13a9bc0652bb076206c2e26b1b601eab356"
+    url "https://github.com/cueblox/blox/releases/download/v0.2.3/blox_0.2.3_darwin_amd64.tar.gz"
+    sha256 "1f7e847f0997d54db92d47dbed21db0f8e03231901883490a44514c4fa80dcaa"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/cueblox/blox/releases/download/v0.2.2/blox_0.2.2_darwin_arm64.tar.gz"
-    sha256 "3b5b4ebc0a456bb339b13bf97c603c4a6b4859898d8767c95b84ee920d3a0403"
+    url "https://github.com/cueblox/blox/releases/download/v0.2.3/blox_0.2.3_darwin_arm64.tar.gz"
+    sha256 "b81a93bb38e3913b3807dd28e7e6ddaa72a28550ea5ae403693b30126a9f0fac"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cueblox/blox/releases/download/v0.2.2/blox_0.2.2_linux_amd64.tar.gz"
-    sha256 "c6383d9950e189733d7b8d61e7f33af7bb283bdaf14fe5f08feee96779c10d6e"
+    url "https://github.com/cueblox/blox/releases/download/v0.2.3/blox_0.2.3_linux_amd64.tar.gz"
+    sha256 "50781383fc1b1845589bc4faf2a2b9274ac8a84465b215dfa3605d060b47e8fc"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/cueblox/blox/releases/download/v0.2.2/blox_0.2.2_linux_arm64.tar.gz"
-    sha256 "142f90697a6bb809427255cd79d2f06b93968528338595d850523613f4364b19"
+    url "https://github.com/cueblox/blox/releases/download/v0.2.3/blox_0.2.3_linux_arm64.tar.gz"
+    sha256 "c3de99f5b6a983f8fc14969acf4eecb2d241d81188f56cce6c68d178e92e7fe7"
   end
 
   def install
