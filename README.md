@@ -1,5 +1,5 @@
-# DevRel Blox Homebrew Tap
+# CueBlox Homebrew Tap
 
-This is the Homebrew Tap / Forumla for the DevRel Blox project.
+This is the Homebrew Tap / Forumla for the CueBlox project.
 
 Good Things are Coming.
