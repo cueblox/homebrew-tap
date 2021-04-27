@@ -5,28 +5,35 @@
 class Blox < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/cueblox/blox/releases/download/v0.4.0/blox_0.4.0_darwin_amd64.tar.gz"
-    sha256 "bf76e73f05c982edcb362a740b94cdd6f9cdc2f9013c53bca750e8e983a4938d"
+    url "https://github.com/cueblox/blox/releases/download/v0.4.1/blox_0.4.1_Darwin_x86_64.tar.gz"
+    sha256 "105c3bb82047958896a23dccfc4046614ca6a7108fad235e20d42d63f5df49aa"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/cueblox/blox/releases/download/v0.4.0/blox_0.4.0_darwin_arm64.tar.gz"
-    sha256 "f30e04796dd80c3fdad0152ff44150141e023262acabc63fb755d30ca55fc6fb"
+    url "https://github.com/cueblox/blox/releases/download/v0.4.1/blox_0.4.1_Darwin_arm64.tar.gz"
+    sha256 "cc635c40de288f2e8e2e96c845f0c2bba7008a0158ebea3a9faea20fd4c8872a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cueblox/blox/releases/download/v0.4.0/blox_0.4.0_linux_amd64.tar.gz"
-    sha256 "3868cb8f7b2821aa815550b94d5c12fef65afa5a51c180c0e8c6f4535f432e49"
+    url "https://github.com/cueblox/blox/releases/download/v0.4.1/blox_0.4.1_Linux_x86_64.tar.gz"
+    sha256 "d151697f76ed0a77078fb6f60d433b0bcc8bd674987e57b7c7d0b7c0bbb643e8"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/cueblox/blox/releases/download/v0.4.0/blox_0.4.0_linux_arm64.tar.gz"
-    sha256 "31b0314940a5f4fd97483cbfb763db90315977eab9abd1556a89f202652345a4"
+    url "https://github.com/cueblox/blox/releases/download/v0.4.1/blox_0.4.1_Linux_arm64.tar.gz"
+    sha256 "9c02c8cca50ebe35dcc6609a7bead3415d0178855711e3a7b32400486c743986"
   end
 
   def install
     bin.install "blox"
+    bash_completion.install "completions/blox.bash" => "blox"
+    zsh_completion.install "completions/blox.zsh" => "_blox"
+    fish_completion.install "completions/blox.fish"
+  end
+
+  test do
+    system "#{bin}/blox -v"
   end
 end
