@@ -5,25 +5,30 @@
 class Blox < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.5.1"
+  version "0.6.1"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/cueblox/blox/releases/download/v0.5.1/blox_0.5.1_Darwin_x86_64.tar.gz"
-    sha256 "db245a3fd2486092222a0fe87f79d5b7aaadbc567dc8bbfb863e92b2ee48f649"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/cueblox/blox/releases/download/v0.6.1/blox_0.6.1_Darwin_x86_64.tar.gz"
+      sha256 "80e023684380bd2e9dd260b040679fb46fd7cf6ce63e082a9501a01ef14bc524"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/cueblox/blox/releases/download/v0.6.1/blox_0.6.1_Darwin_arm64.tar.gz"
+      sha256 "356a0a702e25909d9809af72c1b732c315a2169fc06828d7ec2491b3e2e6b8f0"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/cueblox/blox/releases/download/v0.5.1/blox_0.5.1_Darwin_arm64.tar.gz"
-    sha256 "33c639d3d56cb7e71062d714440dd31ac03641cd21febfa02e036d04b052ef78"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cueblox/blox/releases/download/v0.5.1/blox_0.5.1_Linux_x86_64.tar.gz"
-    sha256 "84c5d987a10c0f6f845a1089c04e87243775f488fab59296dd793b7d9076e42a"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/cueblox/blox/releases/download/v0.5.1/blox_0.5.1_Linux_arm64.tar.gz"
-    sha256 "6297c21ec31b5123e5fe603e5df00c796ef2af9d9bd21d0306dcfbd23c88a111"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/cueblox/blox/releases/download/v0.6.1/blox_0.6.1_Linux_x86_64.tar.gz"
+      sha256 "5bf0d0c6c0095167d2ca30b645f5ea9473825cd00eae958d5c315ae998f6d1f3"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cueblox/blox/releases/download/v0.6.1/blox_0.6.1_Linux_arm64.tar.gz"
+      sha256 "75fb21d0515225f1cddc9834bb56a86e22ed97024d5c8c7c924890d8ac929c51"
+    end
   end
 
   def install
