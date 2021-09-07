@@ -5,29 +5,29 @@
 class Blox < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.6.2"
+  version "0.7.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/blox/releases/download/v0.6.2/blox_0.6.2_Darwin_x86_64.tar.gz"
-      sha256 "de7175a09cc27d8d8ec0f7f0796e24f15545434bb5e28ed99b16a80273a3f6c0"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.0/blox_0.7.0_Darwin_x86_64.tar.gz"
+      sha256 "f637e847fb806ec802eba0380e70010829616a7e8531c2600f829216600bf3ef"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cueblox/blox/releases/download/v0.6.2/blox_0.6.2_Darwin_arm64.tar.gz"
-      sha256 "e0272859a5454aee587ecd70a14209167c2387af9ea1a072d4792849ce14910e"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.0/blox_0.7.0_Darwin_arm64.tar.gz"
+      sha256 "1c8ba69c90b97ebe153cccbbe18ae03d38e6f9006593afe0cff7a5e77472dbb5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/blox/releases/download/v0.6.2/blox_0.6.2_Linux_x86_64.tar.gz"
-      sha256 "c6b0c08bdf11683eb1e1cf666ee41779e1ebfa0233fa52f9dbc0f5a948abd1f2"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.0/blox_0.7.0_Linux_x86_64.tar.gz"
+      sha256 "b00664950b9f6034609bdb397e3d39fe53ec43c78be93cea34fa23c2fd93d31c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cueblox/blox/releases/download/v0.6.2/blox_0.6.2_Linux_arm64.tar.gz"
-      sha256 "ea20404b8eac213f4eb6d44d8a94abd8fca6de6d8736db2250587fe43090f79e"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.0/blox_0.7.0_Linux_arm64.tar.gz"
+      sha256 "5e3f9d9f0713c64142dd8c3b63280227ab619b11fc4b1bd2f665194bdc469923"
     end
   end
 
