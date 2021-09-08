@@ -5,40 +5,33 @@
 class Staticsync < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.2/staticsync_0.0.2_Darwin_x86_64.tar.gz"
-      sha256 "751808dea8282de288aa4dcffa07a74a820ae384a5427d4db5489c3e559314bc"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Darwin_x86_64.tar.gz"
+      sha256 "b238142efdb4a0185a7f477aedb23ea9bf04d5ccc6620d98edf439cf6bba74ad"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.2/staticsync_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "0cd3637f2ab16f8d3bbef88a3a7eced8e295149184ec6e2412ab6d04bc03b5e0"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Darwin_arm64.tar.gz"
+      sha256 "f202f84fc4e4f32971991692f7db86a96f896bedf9b53866576e195e8251599d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.2/staticsync_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "a2c4cd64da7de68ffc24bfa656e4eb1ed4b0f462a31df0753f9ba06596557212"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "a9d2fd94ff6c49b7c144fcc29efe53a0b52ecb2c45a592cdd78cf6cd1c7dc4f0"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.2/staticsync_0.0.2_Linux_arm64.tar.gz"
-      sha256 "0bf391d04b9153e492d1ed06bc598debbcf103848f9196dbfbdb884eefec5b07"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Linux_arm64.tar.gz"
+      sha256 "b0b995fbaf5422cacf502a1fd61d77c233e469733784881122407aeb1ba88c5c"
     end
   end
 
   def install
-    bin.install "blox"
-    bash_completion.install "completions/blox.bash" => "blox"
-    zsh_completion.install "completions/blox.zsh" => "_blox"
-    fish_completion.install "completions/blox.fish"
-  end
-
-  test do
-    system "#{bin}/blox -v"
+    bin.install "staticsync"
   end
 end
