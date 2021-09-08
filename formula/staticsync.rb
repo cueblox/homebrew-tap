@@ -5,29 +5,29 @@
 class Staticsync < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.0.3"
+  version "0.0.5"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Darwin_x86_64.tar.gz"
-      sha256 "b238142efdb4a0185a7f477aedb23ea9bf04d5ccc6620d98edf439cf6bba74ad"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.5/staticsync_0.0.5_Darwin_x86_64.tar.gz"
+      sha256 "b0001e931aa0da0981e8399d2f2543d5d841f694cf4c24ba7ce75dbdcd623603"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Darwin_arm64.tar.gz"
-      sha256 "f202f84fc4e4f32971991692f7db86a96f896bedf9b53866576e195e8251599d"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.5/staticsync_0.0.5_Darwin_arm64.tar.gz"
+      sha256 "1b53d8a37d6d21d48ce1ca1fb177d9035c9652a47c027fa0e8a3a0be766d1f56"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "a9d2fd94ff6c49b7c144fcc29efe53a0b52ecb2c45a592cdd78cf6cd1c7dc4f0"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.5/staticsync_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "9b8645b2a13405a630f74fd7d67b815ccb17b0879217edf11b365f0876763cea"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cueblox/staticsync/releases/download/v0.0.3/staticsync_0.0.3_Linux_arm64.tar.gz"
-      sha256 "b0b995fbaf5422cacf502a1fd61d77c233e469733784881122407aeb1ba88c5c"
+      url "https://github.com/cueblox/staticsync/releases/download/v0.0.5/staticsync_0.0.5_Linux_arm64.tar.gz"
+      sha256 "7048fcf0459d6fcb09c2cc78c0d8bbfa2c6d1cf8ae51f99bd12d9d3c19d6ac91"
     end
   end
 
