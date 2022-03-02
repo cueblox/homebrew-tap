@@ -5,13 +5,13 @@
 class Blox < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.7.4"
+  version "0.7.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Darwin_x86_64.tar.gz"
-      sha256 "56405b2b986a4e88381d909de73710d9656457a075652a94faa7789b18808db2"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.5/blox_0.7.5_Darwin_x86_64.tar.gz"
+      sha256 "3fdc18bca8203c4289de31f0bf2217d1f63ca8e0b3f3df044748453236df007d"
 
       def install
         bin.install "blox"
@@ -21,8 +21,8 @@ class Blox < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Darwin_arm64.tar.gz"
-      sha256 "ca1b5b1e61bf9f070c2cbdf0e3d308c20612c9ffb960464adac6ee223cc7e668"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.5/blox_0.7.5_Darwin_arm64.tar.gz"
+      sha256 "d1ef150de502f88c5db7f7832b6b01fb1c6eb8fa9495d27caac7527dc34d0828"
 
       def install
         bin.install "blox"
@@ -35,8 +35,8 @@ class Blox < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Linux_arm64.tar.gz"
-      sha256 "fcb09eacb46a63af4844d18096fe4480d1d422f0fbe5b8cc99307b0cc1d403a9"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.5/blox_0.7.5_Linux_arm64.tar.gz"
+      sha256 "f28ce4681a1b60b8a37c5fa82f3c78d91bc0afef30a635f0a394346cff7c99eb"
 
       def install
         bin.install "blox"
@@ -46,8 +46,8 @@ class Blox < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Linux_x86_64.tar.gz"
-      sha256 "3f39f9acae0710241c7bbb53edf156b4ea8e21fa5e614831fa9ad7cb537a65ce"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.5/blox_0.7.5_Linux_x86_64.tar.gz"
+      sha256 "27c0909a8184dda1f9d9eea271a09f66c18f72c9c4d5f9c19b75d6d74b29f59a"
 
       def install
         bin.install "blox"
