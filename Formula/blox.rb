@@ -7,7 +7,6 @@ class Blox < Formula
   homepage "https://github.com/cueblox/"
   version "0.7.3"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

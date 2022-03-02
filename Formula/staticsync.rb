@@ -7,7 +7,6 @@ class Staticsync < Formula
   homepage "https://github.com/cueblox/"
   version "0.0.5"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
