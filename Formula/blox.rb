@@ -5,36 +5,57 @@
 class Blox < Formula
   desc "CueBlox"
   homepage "https://github.com/cueblox/"
-  version "0.7.3"
+  version "0.7.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.3/blox_0.7.3_Darwin_x86_64.tar.gz"
-      sha256 "b14b0b25829c5df9e7759af66e24807c7b52f407e3a135885790999fc824391c"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Darwin_x86_64.tar.gz"
+      sha256 "56405b2b986a4e88381d909de73710d9656457a075652a94faa7789b18808db2"
+
+      def install
+        bin.install "blox"
+        bash_completion.install "completions/blox.bash" => "blox"
+        zsh_completion.install "completions/blox.zsh" => "_blox"
+        fish_completion.install "completions/blox.fish"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.3/blox_0.7.3_Darwin_arm64.tar.gz"
-      sha256 "6ec0b90ef9daea3cc6fcb028c1904036a8429be14d63f4def066877c7fa54710"
+      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Darwin_arm64.tar.gz"
+      sha256 "ca1b5b1e61bf9f070c2cbdf0e3d308c20612c9ffb960464adac6ee223cc7e668"
+
+      def install
+        bin.install "blox"
+        bash_completion.install "completions/blox.bash" => "blox"
+        zsh_completion.install "completions/blox.zsh" => "_blox"
+        fish_completion.install "completions/blox.fish"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.3/blox_0.7.3_Linux_x86_64.tar.gz"
-      sha256 "915a8b6e49ce2717d3c9ef66c2778ab434e7251bfd56740013d1e3e30fad562e"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cueblox/blox/releases/download/v0.7.3/blox_0.7.3_Linux_arm64.tar.gz"
-      sha256 "7d2f3f92cbc6f3d2cdea6763b5db03b0be8caf1d52e995e113927467f80c3a66"
-    end
-  end
+      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Linux_arm64.tar.gz"
+      sha256 "fcb09eacb46a63af4844d18096fe4480d1d422f0fbe5b8cc99307b0cc1d403a9"
 
-  def install
-    bin.install "blox"
-    bash_completion.install "completions/blox.bash" => "blox"
-    zsh_completion.install "completions/blox.zsh" => "_blox"
-    fish_completion.install "completions/blox.fish"
+      def install
+        bin.install "blox"
+        bash_completion.install "completions/blox.bash" => "blox"
+        zsh_completion.install "completions/blox.zsh" => "_blox"
+        fish_completion.install "completions/blox.fish"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/cueblox/blox/releases/download/v0.7.4/blox_0.7.4_Linux_x86_64.tar.gz"
+      sha256 "3f39f9acae0710241c7bbb53edf156b4ea8e21fa5e614831fa9ad7cb537a65ce"
+
+      def install
+        bin.install "blox"
+        bash_completion.install "completions/blox.bash" => "blox"
+        zsh_completion.install "completions/blox.zsh" => "_blox"
+        fish_completion.install "completions/blox.fish"
+      end
+    end
   end
 
   test do
